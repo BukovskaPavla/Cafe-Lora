@@ -282,6 +282,11 @@ nav a:hover {
     flex-direction: row;
   }
 
+  /* zneviditelneni hamburger menu */
+  .nav-btn{
+    display: none;
+  }
+
   nav {
     width: initial;
   }
