@@ -246,6 +246,24 @@ nav a:hover {
   background-attachment: fixed;
 }
 
+.gallery__text{
+  /* font-size: 18px;
+  background-color: #000000;
+  opacity: 0.8;
+  padding: 10px 100px; */
+
+  background-color: hsla(280, 6%, 10%, 0.596);
+  background-position: center;
+  padding: 10px 40px 10px 40px;
+  margin: auto;
+  font-size: 1.2rem;
+  max-width: 768px;
+}
+
+.gallery__text p{
+  color: white;
+}
+
 .contacts {
   margin-bottom: 4rem;
 
