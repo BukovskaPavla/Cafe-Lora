@@ -16,14 +16,10 @@ navNav.forEach((elm) => {
     });
   });
 
-
-
-
-
 //KOMPONENTA Layer
 import {Layer} from "./Layer/index.js"
 //data pro komponentu Layer
-const layer = [{
+/* const layer = [{
     color: '#feeeca',
     label: 'mléčná pěna',
   },
@@ -35,14 +31,31 @@ const layer = [{
     color: '#613916',
     label: 'espresso',
   }
- ]
+ ] */
 
 /* const drinkInfo = document.querySelector(".drink__info")
 for (let i = 0; i <= layer.length; i++){
     drinkInfo.innerHTML += Layer(layer[i])
     } */
 
+
 import {Drink} from "./Drink/index.js"
+
+fetch(`https://apps.kodim.cz/daweb/cafelora/api/drinks`)
+    .then((response) => {
+        return response.json()
+    })
+    .then((drinks) => {
+        console.log(drinks.results)
+        
+        const drinkList = document.querySelector(".drinks-list")
+        for (let i = 0; i <= drinks.results.length; i++){
+            drinkList.appendChild(Drink(drinks.results[i]))
+            }
+        return drinks
+    })
+
+
 const drinks = [
     {
       id: 'cappuccino',
@@ -82,9 +95,6 @@ const drinks = [
     },
   ];
 
-  const drinkList = document.querySelector(".drinks-list")
-  for (let i = 0; i <= drinks.length; i++){
-    drinkList.appendChild(Drink(drinks[i]))
-    }
+  
 
   
