@@ -10,14 +10,26 @@ navBtn.addEventListener("click", () => {
     nav.classList.toggle("nav-closed")
 })
 
-
-/* navNav.addEventListener("click", () => {
-    console.log("jsem v menu")
-    nav.classList.add("nav-closed")
-}) */
-
 navNav.forEach((elm) => {
     elm.addEventListener('click', () => {
         nav.classList.add("nav-closed")
     });
   });
+
+
+const orderBtn = document.querySelector(".order-btn")
+let ordered = false
+const drinkCup = document.querySelector(".drink__cup")
+
+orderBtn.addEventListener("click", () => {
+    if (ordered === false){
+        drinkCup.classList.add("drink__cup--selected")
+        ordered = true
+        orderBtn.textContent = "Zrušit"
+    } else {
+        drinkCup.classList.remove("drink__cup--selected")
+        orderBtn.textContent = "Objednat"
+        ordered = false
+    }
+
+})
