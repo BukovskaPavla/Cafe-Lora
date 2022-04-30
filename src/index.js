@@ -43,24 +43,48 @@ for (let i = 0; i <= layer.length; i++){
     } */
 
 import {Drink} from "./Drink/index.js"
-const drink = {
-    id: 'romano',
-    name: 'Romano',
-    ordered: false,
-    layers: [
-      {
-        color: '#fbdf5b',
-        label: 'citrón',
-      },
-      {
-        color: '#613916',
-        label: 'espresso',
-      },
-    ],
-    image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/romano.png',
-  };
+const drinks = [
+    {
+      id: 'cappuccino',
+      name: 'Cappuccino',
+      ordered: false,
+      layers: [
+        {
+          color: '#feeeca',
+          label: 'mléčná pěna',
+        },
+        {
+          color: '#fed7b0',
+          label: 'teplé mléko',
+        },
+        {
+          color: '#613916',
+          label: 'espresso',
+        },
+      ],
+      image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/cappuccino.png',
+    },
+    {
+      id: 'romano',
+      name: 'Romano',
+      ordered: false,
+      layers: [
+        {
+          color: '#fbdf5b',
+          label: 'citrón',
+        },
+        {
+          color: '#613916',
+          label: 'espresso',
+        },
+      ],
+      image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/romano.png',
+    },
+  ];
 
   const drinkList = document.querySelector(".drinks-list")
-  drinkList.appendChild(Drink(drink))
+  for (let i = 0; i <= drinks.length; i++){
+    drinkList.appendChild(Drink(drinks[i]))
+    }
 
   
