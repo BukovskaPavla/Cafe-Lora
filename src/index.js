@@ -33,3 +33,27 @@ orderBtn.addEventListener("click", () => {
     }
 
 })
+
+
+//KOMPONENTA Layer
+import {Layer} from "./Layer/index.js"
+//data pro komponentu Layer
+const layer = [{
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  }
+ ]
+
+const drinkInfo = document.querySelector(".drink__info")
+for (let i = 0; i <= layer.length; i++){
+    drinkInfo.innerHTML += Layer(layer[i])
+    }
+
